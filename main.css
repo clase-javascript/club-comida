@@ -1,0 +1,241 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(3, 33.33vw);
+    grid-template-rows: 25vh, 50vh, 25vh;
+    background: rgb(255, 139, 6);
+}
+
+.contenedor-titulo{
+    grid-column: span 3;
+    grid-row: 1;
+    background: #FFB74D;
+    display: grid;
+    grid-template-columns: repeat(3, 33.33vw);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.logo-comida{
+    grid-column: 2;
+    margin:auto;
+    margin-top: 1rem;
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.titulo{
+    grid-column: 2;
+    margin:auto;
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.menu{
+    padding-top: 1rem;
+    padding-right: 1rem;
+    grid-row: 2;
+    grid-column: 1;
+    margin:auto;
+    overflow:hidden; 
+    overflow-y:scroll;
+    max-height: 50vh;
+    max-width: 50vw;
+    min-width: 50vw;
+}
+
+.titulo-menu{
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+}
+
+#tarjeta-comida{
+    margin-top:auto;
+    grid-row: 2;
+    grid-column: span 2;
+    max-width: 50vw;
+    align-self: center;
+    margin-left: auto;
+    background: #FFB74D;
+}
+
+.comida-imagen{
+    object-fit: cover;
+}
+
+.card-title{
+    font-size: 18px;
+    text-align: center;
+}
+
+.contenedor-redes{
+    grid-row:3;
+    grid-column: span 3;
+    background: #FFB74D;
+    margin-top:1rem;
+    display:grid;
+    grid-template-columns: repeat(3, 33.33vw);
+}
+
+.contenedor-instagram{
+    grid-column: 1;
+}
+
+.contenedor-facebook{
+    grid-column: 2;
+}
+
+.contenedor-tel{
+    grid-column: 3;
+}
+
+.contenedor-instagram, .contenedor-tel, .contenedor-facebook{
+    margin: auto;
+    margin-top:1rem;
+    min-width: 100%;
+    min-height: 17vh;
+    max-width: 100%;
+    max-height: 17vh;
+}
+
+.wapp-logo, .facebook-logo, .instagram-logo{
+    max-width: 10vw;
+    grid-row: 2;
+    align-self: center;
+    display: block;
+    margin:auto;
+    margin-top:1.5rem;
+}
+
+.tel, .facebook, .instagram{
+    display:grid;
+    grid-template-rows: repeat(2, 10vw);
+    text-decoration: none;
+    grid-row: 1;
+    align-items: center;
+    transition: transform 0.5s ease;
+    text-align: center;
+    justify-content: center;
+}
+
+.instagram:hover, .facebook:hover, .tel:hover{
+    transform: scale(1.1);
+}
+
+.parrafo-precio, .parrafo-pedido{
+    text-align: center;
+    font-weight: 500;
+}
+
+.parrafo-precio, .titulo-menu{
+    background: black;
+    color:white;
+}
+
+.list-group-item{
+    background: #FFB74D;
+    font-weight: 500;
+}
+
+.list-group-item:hover{
+    background: #d39332;
+    cursor: pointer;
+}
+
+.texto-instagram, .texto-facebook, .texto-tel{
+    margin-top:1rem;
+}
+
+@media screen and (min-width: 480px){
+    .contenedor-instagram, .contenedor-tel, .contenedor-facebook{
+        min-height: 20vh;
+        max-height: 20vh;
+        margin-bottom: 1rem;
+    }
+
+    .wapp-logo, .facebook-logo, .instagram-logo{
+        max-width: 9vw;
+        margin-top:1rem;
+    }
+
+    .menu{
+        min-height: 60vh;
+        min-width: 50vw;
+    }
+
+    .card-title{
+        font-size: 22px;
+    }
+
+    .titulo{
+        font-size: 19px;
+    }
+
+    .texto-instagram, .texto-facebook, .texto-tel{
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .contenedor-instagram, .contenedor-tel, .contenedor-facebook{
+        min-height: 30vh;
+        max-height: 30vh;
+    }
+
+    .wapp-logo, .facebook-logo, .instagram-logo{
+        max-width: 8vw;
+    }
+
+    .menu{
+        min-width: 40vw;
+    }
+
+    .card-title{
+        font-size: 26px;
+    }
+
+    .titulo{
+        font-size: 30px;
+    }
+
+    .parrafo-precio, .parrafo-pedido{
+        font-size: 22px;
+    }
+
+    .texto-instagram, .texto-facebook, .texto-tel{
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .contenedor-instagram, .contenedor-tel, .contenedor-facebook{
+        min-height: 45vh;
+        max-height: 45vh;
+    }
+
+    #tarjeta-comida{
+        grid-column: 2;
+    }
+
+    .menu{
+        min-width: 30vw;
+    }
+
+    .card-title{
+        font-size: 28px;
+    }
+
+    .titulo{
+        font-size: 40px;
+    }
+
+    .parrafo-precio, .parrafo-pedido{
+        font-size: 24px;
+    }
+
+    .texto-instagram, .texto-facebook, .texto-tel{
+        font-size: 26px;
+    }
+}
